@@ -12,13 +12,13 @@ export default function Header() {
             <Image src={logo} alt="logo do site" quality={100} priority />
           </Link>
           <Link
-            href="#"
+            href="/"
             className="text-white font-bold md:text-lg transition-all duration-500 hover:opacity-70"
           >
             Games
           </Link>
           <Link
-            href="#"
+            href="/profile"
             className="text-white font-bold md:text-lg transition-all duration-500 hover:opacity-70"
           >
             Perfil
@@ -26,11 +26,13 @@ export default function Header() {
         </nav>
 
         <div>
-          <BiUser
-            size={35}
-            color="#fff"
-            className="border-2 border-white rounded-full"
-          />
+          <Link href="/profile">
+            <BiUser
+              size={35}
+              color="#fff"
+              className="border-2 border-white rounded-full"
+            />
+          </Link>
         </div>
       </main>
     </header>

@@ -51,12 +51,13 @@ export default async function Detalhes({ params }: ParamsProps) {
 
   return (
     <div>
-      <div className="w-11/12  h-80 sm:h-96 relative my-2  mx-auto rounded-2xl bg-black">
+      <div className="w-full max-w-7xl  h-80 sm:h-96 relative my-2  mx-auto rounded-2xl bg-black">
         <Image
           src={game.image_url}
           alt={game.title}
           fill
-          className="rounded-2xl opacity-75 object-cover"
+          quality={100}
+          className="rounded-2xl opacity-70 "
         />
       </div>
 

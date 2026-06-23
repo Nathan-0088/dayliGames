@@ -49,7 +49,6 @@ export default async function Home() {
           Conheça novos jogos perfeito para voce
         </h1>
 
-        {/* ✅ só renderiza o banner se o jogo existir */}
         {game && (
           <section className="bg-black w-full rounded-lg">
             <Link
