@@ -6,35 +6,40 @@ import Image from "next/image";
 import Link from "next/link";
 import { BsArrowRightSquare } from "react-icons/bs";
 
-async function getRandomGame() {
+export const dynamic = "force-dynamic";
+
+async function getRandomGame(): Promise<GameProps | null> {
   try {
     const response = await fetch(
       `${process.env.NEXT_BASE_URL}/next-api/?api=game_day`,
       { next: { revalidate: 320 } },
     );
 
+    if (!response.ok) return null;
     return response.json();
   } catch (error) {
     console.log(error);
+    return null;
   }
 }
 
-async function getAllGames() {
+async function getAllGames(): Promise<GameProps[]> {
   try {
-    const data = await fetch(
+    const response = await fetch(
       `${process.env.NEXT_BASE_URL}/next-api/?api=games`,
-      {
-        cache: "no-store",
-      },
+      { cache: "no-store" },
     );
-    return data.json();
+
+    if (!response.ok) return [];
+    return response.json();
   } catch (error) {
     console.log(error);
+    return [];
   }
 }
 
 export default async function Home() {
-  const game: GameProps = await getRandomGame();
+  const game: GameProps | null = await getRandomGame();
   const allGame: GameProps[] = await getAllGames();
 
   return (
@@ -44,30 +49,32 @@ export default async function Home() {
           Conheça novos jogos perfeito para voce
         </h1>
 
-        <section className="bg-black w-full rounded-lg">
-          <Link
-            href={`/game/${game.id}`}
-            className="transition-all duration-300 hover:opacity-80"
-          >
-            <div className="w-full max-h-96 h-96 relative rounded-lg">
-              <div className="absolute z-20 bottom-0 flex gap-3 p-2 items-center justify-center">
-                <p className="text-white font-bold text-xl">{game.title} </p>
+        {/* ✅ só renderiza o banner se o jogo existir */}
+        {game && (
+          <section className="bg-black w-full rounded-lg">
+            <Link
+              href={`/game/${game.id}`}
+              className="transition-all duration-300 hover:opacity-80"
+            >
+              <div className="w-full max-h-96 h-96 relative rounded-lg">
+                <div className="absolute z-20 bottom-0 flex gap-3 p-2 items-center justify-center">
+                  <p className="text-white font-bold text-xl">{game.title}</p>
+                  <BsArrowRightSquare size={24} color="#fff" />
+                </div>
 
-                <BsArrowRightSquare size={24} color="#fff" />
+                <Image
+                  src={game.image_url}
+                  alt={game.title}
+                  priority
+                  quality={100}
+                  fill
+                  className="max-h-96 rounded-lg opacity-50 transition-all duration-500 hover:opacity-80 object-cover md:object-fill"
+                  sizes="(max-width:768px) 100vw, (max-width:1200px) 33vw"
+                />
               </div>
-
-              <Image
-                src={game.image_url}
-                alt={game.title}
-                priority
-                quality={100}
-                fill
-                className="max-h-96 rounded-lg opacity-50 transition-all duration-500 hover:opacity-80 object-cover md:object-fill"
-                sizes="(max-width:768px) 100vw, (max-width:1200px) 33vw,"
-              />
-            </div>
-          </Link>
-        </section>
+            </Link>
+          </section>
+        )}
 
         <Input />
 
