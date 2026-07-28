@@ -1,128 +1,161 @@
 # 🎮 DayliGames
 
-Uma plataforma moderna para descobrir, pesquisar e acompanhar jogos utilizando uma interface intuitiva e responsiva.
-
-## 📸 Preview
-
-![Home](./public/preview.png)
-
----
-
-## ✨ Funcionalidades
-
-- 🎮 Listagem de jogos
-- 🔍 Pesquisa de jogos
-- ❤️ Sistema de favoritos
-- 📄 Página com detalhes completos
-- 📱 Layout responsivo
-- ⚡ Interface rápida e moderna
-
----
-
-## 🚀 Tecnologias
-
 <div align="center">
 
-![Next.js](https://img.shields.io/badge/Next.js-000?style=for-the-badge&logo=next.js)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript)
-![TailwindCSS](https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=tailwindcss)
-![Shadcn/UI](https://img.shields.io/badge/Shadcn_UI-000?style=for-the-badge)
-![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase)
+Uma plataforma moderna para descobrir, pesquisar e acompanhar seus jogos favoritos.
+
+Desenvolvido com **Next.js**, **React**, **TypeScript**, **Tailwind CSS** e **Firebase**.
+
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge\&logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge\&logo=react)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge\&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge\&logo=tailwindcss)](https://tailwindcss.com/)
+[![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge\&logo=firebase)](https://firebase.google.com/)
+[![Vercel](https://img.shields.io/badge/Vercel-Deployed-black?style=for-the-badge\&logo=vercel)](https://dayli-games.vercel.app/)
+
+### 🌐 Demonstração
+
+https://dayli-games.vercel.app/
 
 </div>
 
 ---
 
+## 📖 Sobre
+
+O **DayliGames** é uma aplicação web criada para facilitar a descoberta de novos jogos e proporcionar uma experiência agradável para quem gosta de acompanhar lançamentos e encontrar informações sobre seus títulos favoritos.
+
+Com uma interface moderna, rápida e totalmente responsiva, o sistema permite pesquisar jogos, visualizar informações detalhadas e salvar favoritos para acesso rápido.
+
+---
+
+## ✨ Funcionalidades
+
+* 🎮 Explorar diversos jogos
+* 🔍 Pesquisa rápida por nome
+* 📄 Página com detalhes completos
+* ❤️ Sistema de favoritos
+* 🔐 Autenticação de usuários
+* ⚡ Navegação rápida
+* 📱 Interface responsiva
+* 🎨 Design moderno
+
+---
+
+## 🚀 Tecnologias
+
+### Front-end
+
+* Next.js
+* React
+* TypeScript
+* Tailwind CSS
+* Shadcn/UI
+* React Icons
+
+### Backend
+
+* Firebase Authentication
+* Cloud Firestore
+
+### Ferramentas
+
+* Git
+* GitHub
+* Vercel
+* ESLint
+
+---
+
 ## 📂 Estrutura
 
-```
+```text
 src/
- ├── app/
- ├── components/
- ├── hooks/
- ├── services/
- ├── lib/
- ├── types/
- └── utils/
+│
+├── app/
+├── components/
+├── hooks/
+├── lib/
+├── services/
+├── types/
+└── utils/
 ```
 
 ---
 
 ## ⚙️ Instalação
 
-Clone o projeto
+Clone o repositório:
 
 ```bash
 git clone https://github.com/Nathan-0088/dayliGames.git
 ```
 
-Entre na pasta
+Entre na pasta:
 
 ```bash
 cd dayliGames
 ```
 
-Instale as dependências
+Instale as dependências:
 
 ```bash
 npm install
 ```
 
-Configure o arquivo `.env.local`
-
-```env
-NEXT_PUBLIC_FIREBASE_API_KEY=
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=
-NEXT_PUBLIC_FIREBASE_PROJECT_ID=
-NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=
-NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=
-NEXT_PUBLIC_FIREBASE_APP_ID=
-```
-
-Inicie o projeto
+Execute o projeto:
 
 ```bash
 npm run dev
 ```
 
----
+A aplicação estará disponível em:
 
-## 🖥️ Demonstração
-
-A aplicação permite:
-
-- Navegar pelos lançamentos
-- Buscar qualquer jogo
-- Visualizar informações detalhadas
-- Adicionar jogos aos favoritos
-- Acessar em qualquer dispositivo
+```text
+http://localhost:3000
+```
 
 ---
 
-## 📈 Futuras melhorias
+## 📈 Recursos
 
-- ✅ Login com Google
-- ✅ Lista de desejos
-- ✅ Avaliações dos usuários
-- ⏳ Comentários
-- ⏳ Compartilhamento de jogos
-- ⏳ Tema escuro
+* Pesquisa otimizada
+* Interface responsiva
+* Componentização
+* Código tipado com TypeScript
+* Autenticação segura
+* Persistência de dados
+* Alto desempenho com Next.js
+* Deploy automatizado pela Vercel
 
 ---
 
-## 👨‍💻 Autor
+## 🌎 Deploy
+
+https://dayli-games.vercel.app/
+
+---
+
+## 👨‍💻 Desenvolvedor
 
 **Nathaniel Alves**
 
-GitHub:
-https://github.com/Nathan-0088
-
-LinkedIn:
-(coloque seu LinkedIn)
+GitHub: https://github.com/Nathan-0088
 
 ---
 
 ## 📄 Licença
 
-Este projeto foi desenvolvido para fins de estudo e portfólio.
+Este projeto foi desenvolvido para fins de estudo, prática de desenvolvimento web e composição de portfólio.
+
+Sinta-se à vontade para estudar o código, utilizá-lo como referência e contribuir com melhorias.
+
+---
+
+<div align="center">
+
+### ⭐ Gostou do projeto?
+
+Se este projeto foi útil para você, deixe uma estrela no repositório!
+
+</div>
